@@ -1,3 +1,9 @@
+/**
+ * @file games.c
+ * @brief Game applications.
+ */
+
+
 #include "games.h"
 
 extern GameInputs INPUTS;
@@ -23,6 +29,10 @@ static void RenderAllPoints(Framebuffer fb, Vec_2D *points, uint8_t n);
 static void RenderCube(Framebuffer *fb, Vec_2D *points2d);
 static void RenderTetra(Framebuffer *fb, Vec_2D *points2d);
 
+/**
+ * @brief Initialize and run Cube Game.
+ * @param fb The framebuffer to draw the game
+ */
 void CubeGame(Framebuffer *fb){
 
     SIN_A = sin(ROTATING_ANGLE * PI / 180.0);
@@ -72,6 +82,10 @@ void CubeGame(Framebuffer *fb){
 }
 
 
+/**
+ * @brief Initialize and run Tetrahedron Game.
+ * @param fb The framebuffer to draw the game
+ */
 void TetraGame(Framebuffer *fb){
 
     SIN_A = sin(ROTATING_ANGLE * PI / 180.0);
@@ -116,6 +130,13 @@ void TetraGame(Framebuffer *fb){
     }
 }
 
+/**
+ * @brief Draws a set of points onto the framebuffer
+ * @note CURRENTLY UNUSED
+ * @param fb The framebuffer to draw the game
+ * @param points The array of point.
+ * @param n Size of the array.
+ */
 void RenderAllPoints(Framebuffer *fb, Vec_2D *points, uint8_t n){
     for(uint8_t i = 0; i < n; i++){
         fb->drawPixel(points[i].x, points[i].y);
@@ -123,6 +144,11 @@ void RenderAllPoints(Framebuffer *fb, Vec_2D *points, uint8_t n){
 }
 
 
+/**
+ * @brief Draws the edges of a cube from a set of vertices.
+ * @param fb The framebuffer to draw the edges
+ * @param points The array of vertices.
+ */
 void RenderCube(Framebuffer *fb, Vec_2D *points2d){
     for (uint8_t i = 0; i < 12; i++) {
         uint8_t a = cube_edges[i][0];
@@ -136,6 +162,11 @@ void RenderCube(Framebuffer *fb, Vec_2D *points2d){
 }
 
 
+/**
+ * @brief Draws the edges of a tetrahedron from a set of vertices.
+ * @param fb The framebuffer to draw the edges
+ * @param points The array of vertices.
+ */
 void RenderTetra(Framebuffer *fb, Vec_2D *points2d){
     for (uint8_t i = 0; i < 6; i++) {
         uint8_t a = tetra_edges[i][0];
@@ -147,34 +178,3 @@ void RenderTetra(Framebuffer *fb, Vec_2D *points2d){
         );
     }
 }
-
-
-// void DrawMarkito(void){
-//     char markito[] = "        ####            \r\n"
-//                         "      ##########        \r\n"
-//                         "  ###################   \r\n"
-//                         "  ####################  \r\n"
-//                         " #####################  \r\n"
-//                         "##########  ##########  \r\n"
-//                         "#######       ########  \r\n"
-//                         "####             #####  \r\n"
-//                         " ##              #####  \r\n"
-//                         "  #               ####  \r\n"
-//                         "           ###########  \r\n"
-//                         "  #################    #\r\n"
-//                         "  #####  ##########  # #\r\n"
-//                         "  #####  #########    # \r\n"
-//                         "   ## #               # \r\n"
-//                         "     #                  \r\n"
-//                         "  #                     \r\n"
-//                         "  #                     \r\n"
-//                         "                #       \r\n"
-//                         "    # #####  ##      #  \r\n"
-//                         "      ##    ##          \r\n"
-//                         "      ######       #    \r\n"
-//                         "        ###             \r\n" 
-//                         "       #                \r\n"
-//                         "         #####          \r\n";
-// 
-//     UART_print(markito);
-// }

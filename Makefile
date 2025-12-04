@@ -55,6 +55,11 @@ upload: $(TARGET).hex
 	avrdude -c $(PROGRAMMER) -p $(MCU) -P $(PORT) -b $(BAUD) \
 		-U flash:w:$(TARGET).hex:i
 
+doc:
+	doxygen -g
+
+view_doc:
+	doxygen Doxyfile
 
 clean:
 	rm -rf ${BUILD_DIR} 

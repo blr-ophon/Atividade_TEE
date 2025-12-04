@@ -1,6 +1,18 @@
+/**
+ * @file interrupts.c
+ * @brief Functions to initialize and configure interrupts.
+ */
+
+
 #include "interrupts.h"
 
 
+/**
+ * @brief Initialize External Interrupts.
+ * @note Can initialize both at the same time with | operator.
+ * @param eint External Interrupt number
+ * @param sense Trigger Mode for Interrupts.
+ */
 void initEInt(uint8_t eint, E_INT_SENSE sense){
     uint8_t eint_0 = eint & EINT0? 1 : 0;
     uint8_t eint_1 = eint & EINT1? 1 : 0;
@@ -22,6 +34,10 @@ void initEInt(uint8_t eint, E_INT_SENSE sense){
 }
 
 
+/**
+ * @brief Initialize Pin Change Interrupts.
+ * @param pcint Pin Change Interrupt number
+ */
 void initPCInt(uint8_t pcint){
     if(pcint <= 7){
         PCICR |= (1 << PCIE0);

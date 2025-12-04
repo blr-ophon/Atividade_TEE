@@ -10,4 +10,6 @@
 #include "uart.h"
 
 
+void Menu(void);
+
 #endif

@@ -1,3 +1,8 @@
+/**
+ * @file main.c
+ * @brief Main game/menu loop.
+ */
+
 #include "main.h"
 
 extern GameInputs INPUTS;
@@ -22,7 +27,7 @@ int main(void){
     }
 
     // UART
-    // UART_Init();
+    UART_Init();
     
     Framebuffer fb;
     fb.clear();
@@ -33,6 +38,7 @@ int main(void){
 
         switch(INPUTS.game_select){
             case MENU:
+                Menu();
                 break;
             case CUBE_GAME:
                 CubeGame(&fb);
@@ -45,4 +51,22 @@ int main(void){
         }
     }
     return 0;
+}
+
+
+/**
+ * @brief Prints Menu through UART.
+ */
+void Menu(void){
+    UART_print("\r\n\r\n\r\nO futuro chegou...\r\n");
+    UART_print("\r\n==============================\r\n");
+    UART_print("     PARAIBASTATION 3D     \r\n");
+    UART_print("==============================\r\n");
+    UART_print("\r\nSelecione uma opção:\r\n\r\n");
+    UART_print("1. CUBO\r\n");
+    UART_print("2. TETRAEDRO\r\n\r\n");
+
+    while(INPUTS.game_select == MENU){
+        _delay_ms(1);
+    }
 }
