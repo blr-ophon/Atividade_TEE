@@ -4,6 +4,8 @@
 #include <avr/io.h>
 #include "config.h"
 
+#define CUBE_LENGTH             20
+#define ROTATING_ANGLE          10
 #define CENTER_X                SCREEN_W/2
 #define CENTER_Y                SCREEN_H/2
 #define CENTER_Z                CUBE_LENGTH*3
