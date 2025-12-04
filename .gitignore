@@ -1,0 +1,4 @@
+*.plist
+build
+bin
+.cache
