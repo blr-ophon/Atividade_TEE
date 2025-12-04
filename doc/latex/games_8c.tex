@@ -1,0 +1,91 @@
+\doxysection{src/games.c File Reference}
+\hypertarget{games_8c}{}\label{games_8c}\index{src/games.c@{src/games.c}}
+
+
+Game applications.  
+
+
+{\ttfamily \#include "{}games.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{games_8c_af9f77b4b3a6926d2a09ec3ca4a47a4d7}{Cube\+Game}} (Framebuffer \texorpdfstring{$\ast$}{*}fb)
+\begin{DoxyCompactList}\small\item\em Initialize and run Cube Game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{games_8c_a044cd9799fbb7bf510da785c5bc9552b}{Tetra\+Game}} (Framebuffer \texorpdfstring{$\ast$}{*}fb)
+\begin{DoxyCompactList}\small\item\em Initialize and run Tetrahedron Game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{games_8c_a14bfec02365df23a274a5d7bb1eaba4a}{Render\+All\+Points}} (Framebuffer \texorpdfstring{$\ast$}{*}fb, \mbox{\hyperlink{structVec__2D}{Vec\+\_\+2D}} \texorpdfstring{$\ast$}{*}points, uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Draws a set of points onto the framebuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{games_8c_a78545b3c6bc0540001fbc07c567ba9dc}\label{games_8c_a78545b3c6bc0540001fbc07c567ba9dc} 
+\mbox{\hyperlink{structGameInputs}{Game\+Inputs}} {\bfseries INPUTS}
+\item 
+\Hypertarget{games_8c_a9b68e51763fb294a1cee07a28e2fbd58}\label{games_8c_a9b68e51763fb294a1cee07a28e2fbd58} 
+volatile float {\bfseries SIN\+\_\+A}
+\item 
+\Hypertarget{games_8c_ae1b28a1c71375966dc5194092f06b02c}\label{games_8c_ae1b28a1c71375966dc5194092f06b02c} 
+volatile float {\bfseries COS\+\_\+A}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game applications. 
+
+ISRs to set application/game inputs.
+
+\label{doc-func-members}
+\Hypertarget{games_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{games_8c_af9f77b4b3a6926d2a09ec3ca4a47a4d7}\index{games.c@{games.c}!CubeGame@{CubeGame}}
+\index{CubeGame@{CubeGame}!games.c@{games.c}}
+\doxysubsubsection{\texorpdfstring{CubeGame()}{CubeGame()}}
+{\footnotesize\ttfamily \label{games_8c_af9f77b4b3a6926d2a09ec3ca4a47a4d7} 
+void Cube\+Game (\begin{DoxyParamCaption}\item[{Framebuffer \texorpdfstring{$\ast$}{*}}]{fb}{}\end{DoxyParamCaption})}
+
+
+
+Initialize and run Cube Game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fb} & The framebuffer to draw the game \\
+\hline
+\end{DoxyParams}
+\Hypertarget{games_8c_a14bfec02365df23a274a5d7bb1eaba4a}\index{games.c@{games.c}!RenderAllPoints@{RenderAllPoints}}
+\index{RenderAllPoints@{RenderAllPoints}!games.c@{games.c}}
+\doxysubsubsection{\texorpdfstring{RenderAllPoints()}{RenderAllPoints()}}
+{\footnotesize\ttfamily \label{games_8c_a14bfec02365df23a274a5d7bb1eaba4a} 
+void Render\+All\+Points (\begin{DoxyParamCaption}\item[{Framebuffer \texorpdfstring{$\ast$}{*}}]{fb}{, }\item[{\mbox{\hyperlink{structVec__2D}{Vec\+\_\+2D}} \texorpdfstring{$\ast$}{*}}]{points}{, }\item[{uint8\+\_\+t}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Draws a set of points onto the framebuffer. 
+
+\begin{DoxyNote}{Note}
+CURRENTLY UNUSED 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em fb} & The framebuffer to draw the game \\
+\hline
+{\em points} & The array of point. \\
+\hline
+{\em n} & Size of the array. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{games_8c_a044cd9799fbb7bf510da785c5bc9552b}\index{games.c@{games.c}!TetraGame@{TetraGame}}
+\index{TetraGame@{TetraGame}!games.c@{games.c}}
+\doxysubsubsection{\texorpdfstring{TetraGame()}{TetraGame()}}
+{\footnotesize\ttfamily \label{games_8c_a044cd9799fbb7bf510da785c5bc9552b} 
+void Tetra\+Game (\begin{DoxyParamCaption}\item[{Framebuffer \texorpdfstring{$\ast$}{*}}]{fb}{}\end{DoxyParamCaption})}
+
+
+
+Initialize and run Tetrahedron Game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fb} & The framebuffer to draw the game \\
+\hline
+\end{DoxyParams}

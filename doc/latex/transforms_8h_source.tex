@@ -1,0 +1,42 @@
+\doxysection{transforms.\+h}
+\hypertarget{transforms_8h_source}{}\label{transforms_8h_source}\index{include/transforms.h@{include/transforms.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRANSFORMS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRANSFORMS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <avr/io.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}config.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ CUBE\_LENGTH\ \ \ \ \ \ \ \ \ \ \ \ \ 20}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ ROTATING\_ANGLE\ \ \ \ \ \ \ \ \ \ 10}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CENTER\_X\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCREEN\_W/2}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CENTER\_Y\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCREEN\_H/2}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CENTER\_Z\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CUBE\_LENGTH*3}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ PI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3.14159265358979323846}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DEPTH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CENTER\_Z/2}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ x;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ y;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ z;}
+\DoxyCodeLine{00019\ \}\mbox{\hyperlink{structVec__3D}{Vec\_3D}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ x;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ y;}
+\DoxyCodeLine{00024\ \}\mbox{\hyperlink{structVec__2D}{Vec\_2D}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00027\ \ \ \ \ X\_AXIS\ =\ 0,}
+\DoxyCodeLine{00028\ \ \ \ \ Y\_AXIS\ =\ 1,}
+\DoxyCodeLine{00029\ \ \ \ \ Z\_AXIS\ =\ 2,}
+\DoxyCodeLine{00030\ \}\ E\_AXIS;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{transforms_8c_a7ceb42f37977511ae083d864b44ae0e6}{RotateAllPoints}}(\mbox{\hyperlink{structVec__3D}{Vec\_3D}}\ *points3d,\ uint8\_t\ n,\ E\_AXIS\ axis,\ uint8\_t\ reverse);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{transforms_8c_af2f558a9728b7d7f3a620e11534cc4f2}{MapAllPoints}}(\mbox{\hyperlink{structVec__3D}{Vec\_3D}}\ *points3d,\ \mbox{\hyperlink{structVec__2D}{Vec\_2D}}\ *points2d,\ uint8\_t\ n);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

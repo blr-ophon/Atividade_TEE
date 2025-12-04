@@ -1,0 +1,28 @@
+\doxysection{inputs.\+h}
+\hypertarget{inputs_8h_source}{}\label{inputs_8h_source}\index{include/inputs.h@{include/inputs.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INPUTS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INPUTS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <avr/io.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <avr/interrupt.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00008\ \ \ \ \ INPUT\_X\_POS\ =\ 0,}
+\DoxyCodeLine{00009\ \ \ \ \ INPUT\_X\_NEG\ =\ 1,}
+\DoxyCodeLine{00010\ \ \ \ \ INPUT\_Y\_POS\ =\ 2,}
+\DoxyCodeLine{00011\ \ \ \ \ INPUT\_Y\_NEG\ =\ 3,}
+\DoxyCodeLine{00012\ \ \ \ \ INPUT\_Z\_POS\ =\ 4,}
+\DoxyCodeLine{00013\ \ \ \ \ INPUT\_Z\_NEG\ =\ 5}
+\DoxyCodeLine{00014\ \}\ E\_INPUTS;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00018\ \ \ \ \ uint8\_t\ game\_select;}
+\DoxyCodeLine{00019\ \ \ \ \ uint8\_t\ buttons[6];}
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{structGameInputs}{GameInputs}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

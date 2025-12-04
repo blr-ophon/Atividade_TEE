@@ -1,0 +1,72 @@
+\doxysection{src/transforms.c File Reference}
+\hypertarget{transforms_8c}{}\label{transforms_8c}\index{src/transforms.c@{src/transforms.c}}
+
+
+3d points transformations.  
+
+
+{\ttfamily \#include "{}transforms.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{transforms_8c_a7ceb42f37977511ae083d864b44ae0e6}{Rotate\+All\+Points}} (\mbox{\hyperlink{structVec__3D}{Vec\+\_\+3D}} \texorpdfstring{$\ast$}{*}points3d, uint8\+\_\+t n, E\+\_\+\+AXIS axis, uint8\+\_\+t reverse)
+\begin{DoxyCompactList}\small\item\em Rotates a set of points in 3d space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{transforms_8c_af2f558a9728b7d7f3a620e11534cc4f2}{Map\+All\+Points}} (\mbox{\hyperlink{structVec__3D}{Vec\+\_\+3D}} \texorpdfstring{$\ast$}{*}points3d, \mbox{\hyperlink{structVec__2D}{Vec\+\_\+2D}} \texorpdfstring{$\ast$}{*}points2d, uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Generates projections from a set of points in 3d space to their 2d screen coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{transforms_8c_a63ee37ea3b4ed95046842207415ce571}\label{transforms_8c_a63ee37ea3b4ed95046842207415ce571} 
+float {\bfseries SIN\+\_\+A}
+\item 
+\Hypertarget{transforms_8c_a91f9baf3179c06d2accb8c867c7130a1}\label{transforms_8c_a91f9baf3179c06d2accb8c867c7130a1} 
+float {\bfseries COS\+\_\+A}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+3d points transformations. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{transforms_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{transforms_8c_af2f558a9728b7d7f3a620e11534cc4f2}\index{transforms.c@{transforms.c}!MapAllPoints@{MapAllPoints}}
+\index{MapAllPoints@{MapAllPoints}!transforms.c@{transforms.c}}
+\doxysubsubsection{\texorpdfstring{MapAllPoints()}{MapAllPoints()}}
+{\footnotesize\ttfamily \label{transforms_8c_af2f558a9728b7d7f3a620e11534cc4f2} 
+void Map\+All\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVec__3D}{Vec\+\_\+3D}} \texorpdfstring{$\ast$}{*}}]{points3d}{, }\item[{\mbox{\hyperlink{structVec__2D}{Vec\+\_\+2D}} \texorpdfstring{$\ast$}{*}}]{points2d}{, }\item[{uint8\+\_\+t}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Generates projections from a set of points in 3d space to their 2d screen coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points3d} & Array of points in 3d space. \\
+\hline
+{\em points2d} & Array of point coordinates in 2d screen. \\
+\hline
+{\em n} & size of both arrays \\
+\hline
+\end{DoxyParams}
+\Hypertarget{transforms_8c_a7ceb42f37977511ae083d864b44ae0e6}\index{transforms.c@{transforms.c}!RotateAllPoints@{RotateAllPoints}}
+\index{RotateAllPoints@{RotateAllPoints}!transforms.c@{transforms.c}}
+\doxysubsubsection{\texorpdfstring{RotateAllPoints()}{RotateAllPoints()}}
+{\footnotesize\ttfamily \label{transforms_8c_a7ceb42f37977511ae083d864b44ae0e6} 
+void Rotate\+All\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVec__3D}{Vec\+\_\+3D}} \texorpdfstring{$\ast$}{*}}]{points3d}{, }\item[{uint8\+\_\+t}]{n}{, }\item[{E\+\_\+\+AXIS}]{axis}{, }\item[{uint8\+\_\+t}]{reverse}{}\end{DoxyParamCaption})}
+
+
+
+Rotates a set of points in 3d space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points3d} & Array of points in 3d space. \\
+\hline
+{\em n} & size of array \\
+\hline
+{\em reverse} & Set for reverse direction. \\
+\hline
+\end{DoxyParams}

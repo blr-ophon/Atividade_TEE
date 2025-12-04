@@ -1,0 +1,95 @@
+\doxysection{src/uart.c File Reference}
+\hypertarget{uart_8c}{}\label{uart_8c}\index{src/uart.c@{src/uart.c}}
+
+
+Simple UART driver.  
+
+
+{\ttfamily \#include "{}uart.\+h"{}}\newline
+{\ttfamily \#include $<$util/setbaud.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uart_8c_ad5cbed2a2222bb84e8b5c1caaa50634e}{UART\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes UART0 peripheral. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_ab491a801aab4b4890155dc8c84d17124}{UART\+\_\+\+Send\+Polling}} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Send Data through UART. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8c_a6abf7b80382b29c4dcdf98b378ab698f}{UART\+\_\+\+Receive\+Polling}} (void)
+\begin{DoxyCompactList}\small\item\em Send Data through UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_aa2090af11cec508e478e20e1e5c4e130}{UART\+\_\+print}} (char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Sends a string of characters through UART. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple UART driver. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{uart_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{uart_8c_ad5cbed2a2222bb84e8b5c1caaa50634e}\index{uart.c@{uart.c}!UART\_Init@{UART\_Init}}
+\index{UART\_Init@{UART\_Init}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART\_Init()}{UART\_Init()}}
+{\footnotesize\ttfamily \label{uart_8c_ad5cbed2a2222bb84e8b5c1caaa50634e} 
+void UART\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes UART0 peripheral. 
+
+\begin{DoxyNote}{Note}
+Asyncrhonous. No double speed. TX and RX. 8-\/bit character with one stop bit. 
+\end{DoxyNote}
+\Hypertarget{uart_8c_aa2090af11cec508e478e20e1e5c4e130}\index{uart.c@{uart.c}!UART\_print@{UART\_print}}
+\index{UART\_print@{UART\_print}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART\_print()}{UART\_print()}}
+{\footnotesize\ttfamily \label{uart_8c_aa2090af11cec508e478e20e1e5c4e130} 
+void UART\+\_\+print (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Sends a string of characters through UART. 
+
+\begin{DoxyNote}{Note}
+Polling Mode. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be sent. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8c_a6abf7b80382b29c4dcdf98b378ab698f}\index{uart.c@{uart.c}!UART\_ReceivePolling@{UART\_ReceivePolling}}
+\index{UART\_ReceivePolling@{UART\_ReceivePolling}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART\_ReceivePolling()}{UART\_ReceivePolling()}}
+{\footnotesize\ttfamily \label{uart_8c_a6abf7b80382b29c4dcdf98b378ab698f} 
+uint8\+\_\+t UART\+\_\+\+Receive\+Polling (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Send Data through UART. 
+
+\begin{DoxyNote}{Note}
+Polling Mode. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Byte received. 
+\end{DoxyReturn}
+\Hypertarget{uart_8c_ab491a801aab4b4890155dc8c84d17124}\index{uart.c@{uart.c}!UART\_SendPolling@{UART\_SendPolling}}
+\index{UART\_SendPolling@{UART\_SendPolling}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART\_SendPolling()}{UART\_SendPolling()}}
+{\footnotesize\ttfamily \label{uart_8c_ab491a801aab4b4890155dc8c84d17124} 
+void UART\+\_\+\+Send\+Polling (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Send Data through UART. 
+
+\begin{DoxyNote}{Note}
+Polling Mode 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Byte to be sent. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,60 @@
+\doxysection{src/interrupts.c File Reference}
+\hypertarget{interrupts_8c}{}\label{interrupts_8c}\index{src/interrupts.c@{src/interrupts.c}}
+
+
+Functions to initialize and configure interrupts.  
+
+
+{\ttfamily \#include "{}interrupts.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interrupts_8c_acb18fe4cf87cbfc87ad5a8ee089bbe9a}{init\+EInt}} (uint8\+\_\+t eint, E\+\_\+\+INT\+\_\+\+SENSE sense)
+\begin{DoxyCompactList}\small\item\em Initialize External Interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interrupts_8c_add7119f1fa79217624120829956b32ad}{init\+PCInt}} (uint8\+\_\+t pcint)
+\begin{DoxyCompactList}\small\item\em Initialize Pin Change Interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions to initialize and configure interrupts. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{interrupts_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{interrupts_8c_acb18fe4cf87cbfc87ad5a8ee089bbe9a}\index{interrupts.c@{interrupts.c}!initEInt@{initEInt}}
+\index{initEInt@{initEInt}!interrupts.c@{interrupts.c}}
+\doxysubsubsection{\texorpdfstring{initEInt()}{initEInt()}}
+{\footnotesize\ttfamily \label{interrupts_8c_acb18fe4cf87cbfc87ad5a8ee089bbe9a} 
+void init\+EInt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{eint}{, }\item[{E\+\_\+\+INT\+\_\+\+SENSE}]{sense}{}\end{DoxyParamCaption})}
+
+
+
+Initialize External Interrupts. 
+
+\begin{DoxyNote}{Note}
+Can initialize both at the same time with \texorpdfstring{$\vert$}{|} operator. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em eint} & External Interrupt number \\
+\hline
+{\em sense} & Trigger Mode for Interrupts. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{interrupts_8c_add7119f1fa79217624120829956b32ad}\index{interrupts.c@{interrupts.c}!initPCInt@{initPCInt}}
+\index{initPCInt@{initPCInt}!interrupts.c@{interrupts.c}}
+\doxysubsubsection{\texorpdfstring{initPCInt()}{initPCInt()}}
+{\footnotesize\ttfamily \label{interrupts_8c_add7119f1fa79217624120829956b32ad} 
+void init\+PCInt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pcint}{}\end{DoxyParamCaption})}
+
+
+
+Initialize Pin Change Interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pcint} & Pin Change Interrupt number \\
+\hline
+\end{DoxyParams}
