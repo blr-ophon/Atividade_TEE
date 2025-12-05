@@ -11,7 +11,7 @@ Uses ATMega328p MCU and SSD1306 OLED display.
 - avr-libc
 - avrdude
 
-## Usage
+## Build
 
 Clone the repository:
 
@@ -31,20 +31,20 @@ And Upload. Required avrdude. Uses an arduino board.
 ```
 
 
-## Manual
+# Usage
 
-# Buttons
+## Buttons
 
-**PD2**: Active Low. Rotate around Z counterclockwise
-**PD3**: Active Low. Rotate around Z clockwise
-**PD4**: Active Low. Rotate around X clockwise
-**PD5**: Active Low. Rotate around X counterclockwise
-**PD6**: Active Low. Rotate around Y clockwise
-**PD7**: Active Low. Rotate around Y counterclockwise
+**PD2**: Active Low. Rotate around Z counterclockwise.  
+**PD3**: Active Low. Rotate around Z clockwise. 
+**PD4**: Active Low. Rotate around X clockwise. 
+**PD5**: Active Low. Rotate around X counterclockwise.  
+**PD6**: Active Low. Rotate around Y clockwise. 
+**PD7**: Active Low. Rotate around Y counterclockwise.  
 **PC1**: Active Low. Bit 0 of game select.
 **PC0**: Active Low. Bit 1 of game select.
 
-# Games
+## Games
 
 **0**: Menu
 **1**: Cube
