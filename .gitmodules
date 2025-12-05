@@ -1,6 +1,3 @@
-[submodule "libs/libs/SSD1306-AVR"]
-	path = libs/libs/SSD1306-AVR
-	url = https://github.com/blr-ophon/SSD1306-AVR.git
 [submodule "libs/SSD1306-AVR"]
 	path = libs/SSD1306-AVR
 	url = https://github.com/blr-ophon/SSD1306-AVR.git
